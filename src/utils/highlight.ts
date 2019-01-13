@@ -1,4 +1,4 @@
-import Prism from "prismjs";
+declare const Prism: any; // turatan...
 
 // data-***
 interface HighlightOptions {
@@ -11,7 +11,7 @@ interface HighlightOptions {
 function parseOptions(options: string): HighlightOptions {
   try {
     return Function(`return ${options}`)() as HighlightOptions;
-  } catch  {
+  } catch (e) {
     return { name: options };
   }
 }
@@ -37,16 +37,17 @@ export function highlight(code: string, lang: string): string {
     return code;
   }
 
+  let language = lang ? lang : "plain";
+  let options = {};
+
   if (lang.indexOf(":") > 0) {
     // has some options
-    const language = lang.substr(0, lang.indexOf(":"));
-    const options = parseOptions(lang.substr(lang.indexOf(":") + 1));
-    return `<pre class="language-${language} ${toClasses(options)}" ${toAttributes(options)}>` +
-      `<code class="language-${language}">` +
-      (Prism.languages[language] ? Prism.highlight(code, Prism.languages[language]) : code) +
-      `</code></pre>`;
-  } else {
-    // has no options
-    return `<pre class="language-plain"><code class="language-plain">${code}</code></pre>`;
+    language = lang.substr(0, lang.indexOf(":"));
+    options = parseOptions(lang.substr(lang.indexOf(":") + 1));
   }
+
+  return `<pre class="language-${language} ${toClasses(options)}" ${toAttributes(options)}>` +
+    `<code class="language-${language}">` +
+    (Prism.languages[language] ? Prism.highlight(code, Prism.languages[language]) : code) +
+    `</code></pre>`;
 }

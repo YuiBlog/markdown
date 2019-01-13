@@ -1,32 +1,20 @@
-<template>
-  <div v-html="html"></div>
-</template>
-
 <script lang="ts">
-import Vue from "vue";
-
+import { Component, Prop, Vue } from "vue-property-decorator";
 import { parse } from "../utils/markdown";
 
-export default Vue.extend({
-  name: "markdown-renderer",
-  props: {
-    markdown: {
-      type: String,
-      required: true
-    }
-  },
-  computed: {
-    html(): string {
-      return parse(this.markdown);
-    }
+@Component({ name: "markdown-renderer" })
+export default class MarkdownRenderer extends Vue {
+  @Prop({ required: true, type: String })
+  public markdown!: string;
+
+  public render(h: any) {
+    const html = parse(this.markdown);
+    return h("div", { domProps: { innerHTML: html } });
   }
-});
+}
 </script>
 
 <style lang="scss" scoped>
-// Prism theme
-@import "~prismjs/themes/prism-okaidia.css";
-
 div {
   overflow-wrap: break-word;
 }
@@ -50,12 +38,6 @@ div {
 
       // reset
       text-shadow: none;
-    }
-  }
-
-  li.leading-normal {
-    p {
-      margin: 0;
     }
   }
 }

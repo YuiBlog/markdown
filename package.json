@@ -1,19 +1,19 @@
 {
   "name": "@yuiblog/markdown",
-  "version": "0.1.0",
+  "version": "0.1.4",
   "description": "Markdown renderer for YuiBlog.",
   "repository": {
     "url": "YuiBlog/markdown",
     "type": "git"
   },
-  "main": "dist/@yuiblog/markdown.cjs.js",
+  "main": "dist/markdown.cjs.js",
+  "typings": "dist/index.d.ts",
   "files": [
     "dist"
   ],
   "scripts": {
     "prepublishOnly": "npm test && npm run build",
-    "lint": "eslint . --ext .js --ext .vue",
-    "test": "npm run lint && tyu",
+    "test": "echo 0",
     "build": "bili src/index.ts --js typescript2",
     "example": "poi --serve example/index.js",
     "build:example": "poi --prod example/index.js"
@@ -39,7 +39,7 @@
       "cjs",
       "umd"
     ],
-    "name": "@yuiblog/markdown",
+    "name": "markdown",
     "plugins": [
       "vue"
     ]
@@ -48,20 +48,21 @@
     "@poi/plugin-typescript": "^12.0.1",
     "@types/marked": "^0.6.0",
     "@types/prismjs": "^1.9.0",
+    "@vue/component-compiler-utils": "^2.5.0",
     "bili": "^3.4.2",
     "node-sass": "^4.11.0",
     "poi": "^12.4.3",
     "rollup-plugin-typescript2": "^0.18.1",
-    "rollup-plugin-vue": "^4.4.0",
     "sass-loader": "^7.1.0",
     "typescript": "^3.2.2",
-    "tyu": "^1.0.0",
-    "vue-template-compiler": "^2.5.22",
-    "vue-test-utils": "^1.0.0-beta.9"
+    "vue-template-compiler": "^2.5.22"
   },
   "dependencies": {
     "marked": "^0.6.0",
     "prismjs": "^1.15.0",
-    "vue": "^2.5.22"
+    "rollup-plugin-vue": "4.3.2",
+    "vue": "^2.5.22",
+    "vue-class-component": "^6.3.2",
+    "vue-property-decorator": "^7.3.0"
   }
 }

@@ -9,6 +9,7 @@
 </template>
 
 <script>
+import "prismjs";
 import MarkdownRenderer from "../src";
 
 export default {
@@ -52,6 +53,8 @@ say("Hello, World");
 </script>
 
 <style lang="scss" scoped>
+@import "~prismjs/themes/prism-okaidia.css";
+
 #app {
   display: flex;
 

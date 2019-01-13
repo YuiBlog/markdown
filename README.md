@@ -13,6 +13,7 @@ yarn add @yuiblog/markdown
 
 CDN: [UNPKG](https://unpkg.com/@yuiblog/markdown/) | [jsDelivr](https://cdn.jsdelivr.net/npm/@yuiblog/markdown/) (available as `window.MarkdownRenderer`)
 
+
 ## Usage
 
 ```vue
@@ -21,6 +22,9 @@ CDN: [UNPKG](https://unpkg.com/@yuiblog/markdown/) | [jsDelivr](https://cdn.jsde
 </template>
 
 <script>
+import "prismjs"; // You must import "prismjs" in your application.
+
+import "prismjs/components/prism-csharp"; // If you want to use languages other than built-in, import it.
 import MarkdownRenderer from '@yuiblog/markdown'
 
 export default {
@@ -34,6 +38,12 @@ export default {
   }
 }
 </script>
+
+<style lang="scss" scoped>
+// import theme
+@import "~prismjs/themes/prism-okaidia.css";
+@import "~@yuiblog/dist/markdown.css";
+</style>
 ```
 
 ## License
