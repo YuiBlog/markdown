@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "description": "Markdown renderer for YuiBlog.",
   "repository": {
-    "url": "mika-f/@yuiblog/markdown",
+    "url": "YuiBlog/markdown",
     "type": "git"
   },
   "main": "dist/@yuiblog/markdown.cjs.js",
