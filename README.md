@@ -17,7 +17,7 @@ CDN: [UNPKG](https://unpkg.com/@yuiblog/markdown/) | [jsDelivr](https://cdn.jsde
 
 ```vue
 <template>
-  <markdown-renderer></markdown-renderer>
+  <markdown-renderer :markdown="markdown" />
 </template>
 
 <script>
@@ -26,6 +26,11 @@ import MarkdownRenderer from '@yuiblog/markdown'
 export default {
   components: {
     MarkdownRenderer
+  },
+  data: () => {
+    return {
+      markdown: "Your markdown here."
+    }
   }
 }
 </script>
