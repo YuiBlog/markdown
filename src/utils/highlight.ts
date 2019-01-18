@@ -33,14 +33,10 @@ function toClasses(options: HighlightOptions): string {
 }
 
 export function highlight(code: string, lang: string): string {
-  if (!lang) {
-    return code;
-  }
-
   let language = lang ? lang : "plain";
   let options = {};
 
-  if (lang.indexOf(":") > 0) {
+  if (lang.indexOf(":") > 0 && lang.split(":")[1] !== "") {
     // has some options
     language = lang.substr(0, lang.indexOf(":"));
     options = parseOptions(lang.substr(lang.indexOf(":") + 1));
