@@ -45,18 +45,18 @@
     ]
   },
   "devDependencies": {
-    "@poi/plugin-typescript": "^12.0.1",
-    "@types/marked": "^0.6.0",
-    "@types/prismjs": "^1.9.0",
-    "@vue/component-compiler-utils": "^2.5.0",
-    "bili": "^3.4.2",
-    "node-sass": "^4.11.0",
-    "poi": "^12.4.3",
-    "rollup-plugin-typescript2": "^0.18.1",
+    "@poi/plugin-typescript": "12.0.1",
+    "@types/marked": "0.6.0",
+    "@types/prismjs": "1.9.0",
+    "@vue/component-compiler-utils": "2.5.0",
+    "bili": "3.4.2",
+    "node-sass": "4.11.0",
+    "poi": "12.4.3",
+    "rollup-plugin-typescript2": "0.18.1",
     "rollup-plugin-vue": "4.3.2",
-    "sass-loader": "^7.1.0",
-    "typescript": "^3.2.2",
-    "vue-template-compiler": "^2.5.22"
+    "sass-loader": "7.1.0",
+    "typescript": "3.2.2",
+    "vue-template-compiler": "2.5.22"
   },
   "dependencies": {
     "marked": "^0.6.0",
