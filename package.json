@@ -53,7 +53,7 @@
     "node-sass": "4.11.0",
     "poi": "12.4.3",
     "rollup-plugin-typescript2": "0.20.1",
-    "rollup-plugin-vue": "4.3.2",
+    "rollup-plugin-vue": "4.7.2",
     "sass-loader": "7.1.0",
     "typescript": "3.4.3",
     "vue-template-compiler": "2.5.22"
