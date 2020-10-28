@@ -59,7 +59,7 @@
     "vue-template-compiler": "2.5.22"
   },
   "dependencies": {
-    "marked": "^0.6.0",
+    "marked": "^0.7.0",
     "prismjs": "^1.15.0",
     "vue": "^2.5.22",
     "vue-class-component": "^6.3.2",
