@@ -51,7 +51,7 @@
     "@vue/component-compiler-utils": "2.5.0",
     "bili": "3.4.2",
     "node-sass": "4.11.0",
-    "poi": "12.4.3",
+    "poi": "12.10.3",
     "rollup-plugin-typescript2": "0.20.1",
     "rollup-plugin-vue": "4.3.2",
     "sass-loader": "7.1.0",
